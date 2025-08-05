@@ -28,8 +28,6 @@ The presentation is a single-page web application. You can navigate through the 
 ## Project Details
 
 * **Author**: Devanand S B
-* **BITS ID**: 2021WA15043
-* **Supervisor**: Shanmugasundaram Ramakrishnan
 * **Affiliation**: BITS Pilani
 
 ---

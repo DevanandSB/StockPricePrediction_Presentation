@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissertation Presentation - A Smart System for Predicting Stock Prices</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <button class="fullscreen-btn" id="fullscreenBtn">⛶ Fullscreen</button>
+
+    <div class="presentation-container" id="presentationContainer">
+        <div class="presentation" id="presentation">
+            <!-- Title Slide -->
+            <div class="slide active title-slide">
+                <div class="slide-content">
+                    <h1 class="slide-header">A Smart System for Predicting Stock Prices</h1>
+                    <p class="subtitle">Using Company Fundamentals and News Sentiment</p>
+                    <div class="author-info">
+                        <p><strong>Devanand S B</strong></p>
+                        <p>BITS ID: 2021WA15043</p>
+                        <p>Supervisor: Shanmugasundaram Ramakrishnan</p>
+                        <p>First Examiner: Swetha K</p>
+                        <p>Second Examiner: Hemavathi J</p>
+                    </div>
+                    <div class="institution-info">
+                        <p>Birla Institute of Technology and Science, Pilani</p>
+                        <p>First Semester 2025-26</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scope and Objectives -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Scope and Objectives</h2>
+                    <div class="list-item">Build and test a <span class="highlight">hybrid deep learning model</span> to improve stock price prediction</div>
+                    <div class="list-item">Combine three data types: <span class="highlight">financial data</span>, <span class="highlight">news sentiment</span>, and <span class="highlight">past prices</span></div>
+                    <div class="list-item">Data collection, cleaning, and preprocessing</div>
+                    <div class="list-item">Design an <span class="highlight">LSTM-based model</span> with FinBERT for sentiment analysis</div>
+                    <div class="list-item">Compare results with standard prediction models</div>
+                </div>
+            </div>
+
+            <!-- Background and Previous Work -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Background and Previous Work</h2>
+                    <div class="list-item">Most existing models use only one data type (technical, fundamental, or sentiment)</div>
+                    <div class="list-item">Recent research suggests <span class="highlight">combining all three improves accuracy</span></div>
+                    <div class="list-item">Innovation: <span class="highlight">LSTM network</span> for time-series + <span class="highlight">FinBERT</span> for financial text analysis</div>
+                    <div class="list-item">Expected to outperform traditional methods in prediction accuracy</div>
+                </div>
+            </div>
+
+            <!-- Proposed Methodology -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Proposed Methodology</h2>
+                    <div class="two-column">
+                        <div class="column">
+                            <div class="list-item">1. Collect and clean data: prices, financials, news</div>
+                            <div class="list-item">2. Use <span class="highlight">FinBERT</span> to analyze news and create sentiment scores</div>
+                        </div>
+                        <div class="column">
+                            <div class="list-item">3. Build <span class="highlight">multi-input LSTM model</span> combining all data types</div>
+                            <div class="list-item">4. Test accuracy using <span class="highlight">MAE and RMSE</span>, compare with baseline</div>
+                        </div>
+                    </div>
+                    <div class="model-diagram">
+                        <h3>Hybrid Model Architecture</h3>
+                        <div class="model-steps">
+                            <div class="model-step">Input Layer: Historical Prices (Time Series Data)</div>
+                            <div class="model-step">Input Layer: Company Fundamentals (Structured Data)</div>
+                            <div class="model-step">Input Layer: News Sentiment Scores (from FinBERT)</div>
+                            <div class="model-step">LSTM Layers for Temporal Patterns</div>
+                            <div class="model-step">Dense Layers for Feature Combination</div>
+                            <div class="model-step">Output Layer: Price Prediction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Benefits -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Expected Benefits</h2>
+                    <div class="list-item">A <span class="highlight">practical stock prediction tool</span> for investors</div>
+                    <div class="list-item">Demonstration that <span class="highlight">multi-data approaches</span> improve accuracy</div>
+                    <div class="list-item">Contribution to <span class="highlight">financial data science</span> methodology</div>
+                    <div class="list-item">Potential for <span class="highlight">real-world application</span> in trading systems</div>
+                    <div class="list-item">Foundation for <span class="highlight">future research</span> in hybrid models</div>
+                </div>
+            </div>
+
+            <!-- Detailed Plan of Work -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Detailed Plan of Work (16 Weeks)</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-period">Week 1</div>
+                            <div class="timeline-content">
+                                <h4>Literature Review & Setup</h4>
+                                <p>Review existing research, select target stocks, set up environment</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 2-3</div>
+                            <div class="timeline-content">
+                                <h4>Data Collection</h4>
+                                <p>Gather historical prices, financial data, and news articles</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Week 4</div>
+                            <div class="timeline-content">
+                                <h4>Data Cleaning</h4>
+                                <p>Normalize features, align all data, create master dataset</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Week 5</div>
+                            <div class="timeline-content">
+                                <h4>Sentiment Analysis</h4>
+                                <p>Run FinBERT on news, create daily sentiment scores</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 6-7</div>
+                            <div class="timeline-content">
+                                <h4>Model Development</h4>
+                                <p>Build baseline LSTM, add fundamental data</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 8-9</div>
+                            <div class="timeline-content">
+                                <h4>Hybrid Model</h4>
+                                <p>Develop final hybrid LSTM, start hyperparameter tuning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan of Work Continued -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2 class="slide-header">Plan of Work Continued</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 10-11</div>
+                            <div class="timeline-content">
+                                <h4>Model Testing</h4>
+                                <p>Evaluate accuracy (MAE, RMSE), compare with baseline</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 12-13</div>
+                            <div class="timeline-content">
+                                <h4>Writing</h4>
+                                <p>Draft dissertation chapters 1-5 (Intro to Conclusion)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Weeks 14-15</div>
+                            <div class="timeline-content">
+                                <h4>Finalization</h4>
+                                <p>Edit and format manuscript, prepare defense presentation</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">Week 16</div>
+                            <div class="timeline-content">
+                                <h4>Submission</h4>
+                                <p>Submit dissertation, prepare for viva voce</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="slide">
+                <div class="slide-content" style="text-align: left;">
+                    <h2 class="slide-header">References</h2>
+                    <div class="citation">
+                        <p>1. Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. <em>Neural Computation</em>, 9(8), 1735-1780.</p>
+                    </div>
+                    <div class="citation">
+                        <p>2. Arévalo, A., et al. (2020). FinBERT: A Pre-trained Language Model for Financial Communications. <em>arXiv preprint arXiv:2006.08097</em>.</p>
+                    </div>
+                    <div class="citation">
+                        <p>3. Nelson, D. M., et al. (2017). Stock market prediction using a hybrid model of bagging and long short-term memory. <em>Proceedings of the 50th Hawaii International Conference on System Sciences</em>.</p>
+                    </div>
+                    <div class="citation">
+                        <p>4. Akita, R., et al. (2016). Deep learning for stock prediction using numerical and textual information. <em>2016 IEEE/ACIS 15th International Conference on Computer and Information Science (ICIS)</em>.</p>
+                    </div>
+                    <div class="citation">
+                        <p>5. Makrelov, K., et al. (2019). A survey of stock market prediction using machine learning. <em>2019 International Conference on Intelligent Systems and Signal Processing (ISSP)</em>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Closing Slide -->
+            <div class="slide title-slide">
+                <div class="slide-content">
+                    <h1 class="slide-header">Thank You</h1>
+                    <p class="subtitle">Questions and Discussion</p>
+                    <div class="author-info" style="margin-top: 4rem;">
+                        <p><strong>Devanand S B</strong></p>
+                        <p>2021wa15043@wilp.bits-pilani.ac.in</p>
+                        <p>Supervisor: shanmugasundaram.ramakrishnan@wipro.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="control-btn" id="prevBtn">←</div>
+        <div class="control-btn" id="nextBtn">→</div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
